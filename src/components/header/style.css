@@ -1,0 +1,25 @@
+header, body, nav, li, ul, a{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background: linear-gradient(to right,rgb(197, 7, 197),purple);
+}
+header nav{
+    padding: 20px;
+}
+header nav ul li{
+    list-style: none;
+    float: left;
+}
+header nav ul{
+    float: right;
+}
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+li + li{
+    margin-left: 20px;
+}
