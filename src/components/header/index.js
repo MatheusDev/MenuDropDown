@@ -29,7 +29,7 @@ class Header extends Component {
 							<li><a href="#" >Home</a></li>
 							<li><a href="#">Reportar DMCA</a></li>
 							<li><a href="#">Contato</a></li>
-							<li><a href="#" onClick={() => this.setState({cursos:true})}>Cursos</a>
+              <li><a href="#" onClick={() => this.setState({cursos:true})} onMouseOut={() => this.setState({cursos:true})}>Cursos</a>
 								{this.cursos()}
 							</li>
 							<li><a >Ajuda</a></li>
