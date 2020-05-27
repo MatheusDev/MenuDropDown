@@ -1,4 +1,4 @@
-body, nav, ul{
+body, nav, ul, header{
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
@@ -22,6 +22,7 @@ header nav ul li{
     float: left;
 }
 header nav ul li a{
+    transition: all 0.2s;
     text-align: center;
     display: block;
     color: #fff;
@@ -36,6 +37,10 @@ ul ul{
 ul ul li a{
     text-align: center;
     padding: 15px;
+    transition: all 0.4s ;
+}
+ul ul li a:hover{
+    border-bottom: rgb(85, 84, 85) 2px solid;
 }
 ul ul li{
     float: none;
