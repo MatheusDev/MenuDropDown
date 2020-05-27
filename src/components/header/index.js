@@ -11,7 +11,7 @@ class Header extends Component {
 	cursos = () => {
 		if(this.state.cursos){
 			return (
-				<ul>
+				<ul className="cursos">
 					<li><a href="#">JavaScript</a></li>
 					<li><a href="#">React.js</a></li>
 					<li><a href="#">Node.js</a></li>
@@ -26,13 +26,19 @@ class Header extends Component {
 				<header>
 					<nav>
 						<ul>
-							<li><a href="#" >Home</a></li>
-							<li><a href="#">Reportar DMCA</a></li>
-							<li><a href="#">Contato</a></li>
-              <li><a href="#" onClick={() => this.setState({cursos:true})} onMouseOut={() => this.setState({cursos:true})}>Cursos</a>
-								{this.cursos()}
+              <li ><a className="main-menu" href="#">Home</a></li>
+              <li ><a className="main-menu" href="#">Reportar DMCA</a></li>
+              <li ><a className="main-menu" href="#">Contato</a></li>
+              <li ><a className="main-menu" href="#"onClick={() => this.setState({cursos:true})} onMouseOut={() => this.setState({cursos:false})}>Cursos</a>
+								{/*this.cursos()*/}
+                <ul>
+					        <li><a href="#">JavaScript</a></li><br/>
+					        <li><a href="#">React.js</a></li><br/>
+					        <li><a href="#">Node.js</a></li><br/>
+					        <li><a href="#">MySQL</a></li>
+				        </ul>
 							</li>
-							<li><a >Ajuda</a></li>
+							<li ><a className="main-menu" >Ajuda</a></li>
 						</ul>
 					</nav>
 				</header>

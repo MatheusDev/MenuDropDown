@@ -1,25 +1,51 @@
-header, body, nav, li, ul, a{
+body, nav, ul{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 header{
-    background: linear-gradient(to right,rgb(197, 7, 197),purple);
-}
-header nav{
+    height: 20px;
     padding: 20px;
+    background: linear-gradient(to right, rgb(194, 10, 194), rgb(156, 7, 156));
+}
+
+header nav ul{
+    
+    display: block;
+    position: relative;
+    list-style: none;
+    float: right;
+    
 }
 header nav ul li{
-    list-style: none;
     float: left;
 }
-header nav ul{
-    float: right;
-}
 header nav ul li a{
+    text-align: center;
+    display: block;
     color: #fff;
     text-decoration: none;
 }
-li + li{
+ul ul{
+    position: absolute;
+    background-color: rgb(131, 129, 131);
+    position: absolute;
+    float: left;
+}
+ul ul li a{
+    text-align: center;
+    padding: 15px;
+}
+ul ul li{
+    float: none;
+}
+li+li{
     margin-left: 20px;
+}
+header nav ul li a.main-menu:hover{
+    color: rgb(194, 10, 194);
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #ccc;
 }
