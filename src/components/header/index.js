@@ -5,29 +5,27 @@ class Header extends Component {
   constructor(props){
 		super(props)
 		this.state = {
-      cursosKey: false,
-      subMenu:  <ul className="sub-menu">
-                  <li><a href="#">JavaScript</a></li><br/>
-                  <li><a href="#">React.js</a></li><br/>
-                  <li><a href="#">Node.js</a></li><br/>
-                  <li><a href="#">MySQL</a></li>
-                </ul>
+       subMenu: null
 		}
   }
-  mouseOut = (className = 'sub-menu') => {
-    if(this.state.subMenu){
-      this.setState({cursosKey:true})
-    }
-    this.setState({cursosKey:false})
+  hideSubMenu = () => {
+    this.setState({subMenu: null
+      
+    })
   }
-	cursos = () => {
-		if(this.state.cursosKey){
-			return (
-				this.state.subMenu
-			)
-		}
-	}
+  showSubMenu = () => {
+    this.setState({subMenu:
+      <ul className="sub-menu" style={{display: "grid"}}>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">React.js</a></li>
+      <li><a href="#">Node.js</a></li>
+      <li><a href="#">MySQL</a></li>
+    </ul>
+    })
+  }
+  
 	render(){
+    const subMenu = this.state.subMenu
 		return(
 			<Fragment>
 				<header>
@@ -36,8 +34,8 @@ class Header extends Component {
               <li ><a className="main-menu" href="#">Home</a></li>
               <li ><a className="main-menu" href="#">Reportar DMCA</a></li>
               <li ><a className="main-menu" href="#">Contato</a></li>
-              <li ><a className="main-menu" href="#"onMouseEnter={() => this.setState({cursosKey:true})} onMouseOut={() => this.mouseOut()}>Cursos</a>
-								{this.cursos()}
+              <li className="test" onMouseEnter={()=>{this.showSubMenu()}} onMouseOut={()=>{this.hideSubMenu()}}><a className="main-menu" href="#">Cursos</a>
+                {subMenu}
 							</li>
 							<li ><a className="main-menu" >Ajuda</a></li>
 						</ul>

@@ -28,11 +28,24 @@ header nav ul li a{
     color: #fff;
     text-decoration: none;
 }
+header nav ul li a.main-menu:hover{
+    color: rgb(194, 10, 194);
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+/*segundo menu*/
 ul ul{
+    
     position: absolute;
     background-color: rgb(131, 129, 131);
-    position: absolute;
     float: left;
+}
+ul ul.sub-menu{
+    display: none;
+}
+.test{
+    display: inline;
 }
 ul ul li a{
     text-align: center;
@@ -47,10 +60,4 @@ ul ul li{
 }
 li+li{
     margin-left: 20px;
-}
-header nav ul li a.main-menu:hover{
-    color: rgb(194, 10, 194);
-    background-color: #fff;
-    padding: 5px;
-    box-shadow: 2px 2px 2px #ccc;
 }
