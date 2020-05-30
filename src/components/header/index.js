@@ -15,7 +15,7 @@ class Header extends Component {
   }
   showSubMenu = () => {
     this.setState({subMenu:
-      <ul className="sub-menu" style={{display: "grid"}}>
+      <ul className="sub-menu" onMouseEnter={} style={{display: "grid"}}>
       <li><a href="#">JavaScript</a></li>
       <li><a href="#">React.js</a></li>
       <li><a href="#">Node.js</a></li>
