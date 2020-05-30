@@ -30,13 +30,13 @@ header nav ul li a{
     text-decoration: none;
 }
 header nav ul li a.main-menu:hover{
+    padding: 15px;
     color: rgb(194, 10, 194);
     background-color: #fff;
     box-shadow: 2px 2px 2px #ccc;
 }
 /*segundo menu*/
 ul ul{
-    display: block;
     position: absolute;
     background-color: rgb(131, 129, 131);
     float: left;
