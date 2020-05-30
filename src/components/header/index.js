@@ -16,10 +16,10 @@ class Header extends Component {
   showSubMenu = () => {
     this.setState({subMenu:
     <ul className="sub-menu" onMouseEnter={()=>this.showSubMenu()} style={{display: "grid"}}>
-      <li><a href="#">JavaScript</a></li>
-      <li><a href="#">React.js</a></li>
-      <li><a href="#">Node.js</a></li>
-      <li><a href="#">MySQL</a></li>
+      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">JavaScript</a></li>
+      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">React.js</a></li>
+      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">Node.js</a></li>
+      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">MySQL</a></li>
     </ul>
     })
   }
