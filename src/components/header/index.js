@@ -15,15 +15,15 @@ class Header extends Component {
   }
   showSubMenu = () => {
     this.setState({subMenu:
-    <ul className="sub-menu" onMouseEnter={()=>this.showSubMenu()} style={{display: "grid"}}>
-      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">JavaScript</a></li>
-      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">React.js</a></li>
-      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">Node.js</a></li>
-      <li onMouseEnter={()=>this.showSubMenu()}><a href="#">MySQL</a></li>
+    <ul className="sub-menu" onMouseOut={this.hideSubMenu()} style={{display: "grid"}}>
+      <li onMouseEnter={()=>this.showSubMenu()} onMouseOut={()=>this.hideSubMenu()}><a href="#">JavaScript</a></li>
+      <li onMouseEnter={()=>this.showSubMenu()} onMouseOut={()=>this.hideSubMenu()}><a href="#">React.js</a></li>
+      <li  ><a href="#">Node.js</a></li>
+      <li  ><a href="#">MySQL</a></li>
     </ul>
     })
   }
-
+  
 	render(){
     const subMenu = this.state.subMenu
 		return(
@@ -34,7 +34,7 @@ class Header extends Component {
               <li ><a className="main-menu" href="#">Home</a></li>
               <li ><a className="main-menu" href="#">Reportar DMCA</a></li>
               <li ><a className="main-menu" href="#">Contato</a></li>
-              <li className="test" onMouseEnter={()=>{this.showSubMenu()}} onMouseOut={()=>{this.hideSubMenu()}}><a className="main-menu" href="#">Cursos</a>
+              <li className="test" onMouseEnter={()=>{this.showSubMenu()}} ><a className="main-menu" href="#">Cursos</a>
                 {subMenu}
 							</li>
 							<li ><a className="main-menu" >Ajuda</a></li>
