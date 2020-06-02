@@ -5,44 +5,36 @@ class Header extends Component {
   constructor(props){
 		super(props)
 		this.state = {
-       subMenu: null
+       
 		}
-  }
-  hideSubMenu = () => {
-    this.setState({subMenu: null
-      
-    })
-  }
-  showSubMenu = () => {
-    this.setState({subMenu:
-    <ul className="sub-menu" onMouseOut={this.hideSubMenu()} style={{display: "grid"}}>
-      <li onMouseEnter={()=>this.showSubMenu()} onMouseOut={()=>this.hideSubMenu()}><a href="#">JavaScript</a></li>
-      <li onMouseEnter={()=>this.showSubMenu()} onMouseOut={()=>this.hideSubMenu()}><a href="#">React.js</a></li>
-      <li  ><a href="#">Node.js</a></li>
-      <li  ><a href="#">MySQL</a></li>
-    </ul>
-    })
   }
   
 	render(){
-    const subMenu = this.state.subMenu
-		return(
-			<Fragment>
-				<header>
-					<nav>
-						<ul>
-              <li ><a className="main-menu" href="#">Home</a></li>
-              <li ><a className="main-menu" href="#">Reportar DMCA</a></li>
-              <li ><a className="main-menu" href="#">Contato</a></li>
-              <li className="test" onMouseEnter={()=>{this.showSubMenu()}} ><a className="main-menu" href="#">Cursos</a>
-                {subMenu}
-							</li>
-							<li ><a className="main-menu" >Ajuda</a></li>
-						</ul>
-					</nav>
-				</header>
-			</Fragment>
-		)
-	}
+    return(
+      <header>
+        <div className="logo">
+          <a>
+            <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" title="Home"></img>
+          </a>
+        </div>
+        <button className="menu-toggle">
+          <i className="fa fa-lg fa-bars"></i>
+        </button>
+        <nav className="menu">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <aside className="autenticacao">
+          <a href="#login">Login</a>
+          <a href="#registrar" className="botao destaque">Registrar</a>
+        </aside>
+      </header>
+    )
+  }
+	
 }
 export default Header
