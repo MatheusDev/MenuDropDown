@@ -75,4 +75,11 @@ header aside.autenticacao a.botao{
 }
 header aside.autenticacao a.destaque:active{
     box-shadow: 0px 0px 0px var(--color-black);
+    
+}
+
+@media (min-width: 1200px){
+    header img{
+        display: none;
+    }
 }
