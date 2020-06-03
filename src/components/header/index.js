@@ -8,7 +8,6 @@ class Header extends Component {
        
 		}
   }
-  
 	render(){
     return(
       <header>
@@ -23,7 +22,14 @@ class Header extends Component {
         <nav className="menu">
           <ul>
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#cursos">Cursos</a>
+              <ul className="">
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">ReactJS</a></li>
+                <li><a href="#">Node</a></li>
+                <li><a href="#">ReactNative</a></li>
+              </ul>
+            </li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
