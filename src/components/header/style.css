@@ -78,8 +78,13 @@ header aside.autenticacao a.destaque:active{
     
 }
 
-@media (min-width: 1200px){
-    header img{
+@media (max-width: 820px){
+    header aside.autenticacao {
         display: none;
+    }
+}
+@media (max-width: 700px){
+    header button.menu-toggle{
+        display: block;
     }
 }
