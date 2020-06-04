@@ -8,6 +8,7 @@ body{
 :root{
     --color-blue: rgb(104,170,217);
     --color-black: rgb(51,51,51);
+    --color-soft-black: rgb(85,85,85);
     --color-white: rgb(225,224,224);
     --color-red: rgb(222,50,58);
 }
@@ -83,8 +84,41 @@ header aside.autenticacao a.destaque:active{
         display: none;
     }
 }
-@media (max-width: 700px){
+@media (max-width: 680px){
     header button.menu-toggle{
+        padding: 10px 20px;
+        position: relative;
+        display: block;
+        float: right;
+        top: -65px;
+        right: 10px;
+        font-size: 25px;
+        border: solid 0px;
+        margin: 0px;
+        border-radius: 10px;
+        color: var(--color-white);
+        background-color: var(--color-soft-black);
+    }
+    header{
+        width: 100%;
+    }
+    header nav.menu{
+        width: 100%;
+        float: left;
+        display: block;
+        left: -320px;
+    }
+    headr nav.menu ul{
+        width: 1500px;
+    }
+    header nav.menu ul li{
+        width: 100%;
+        background-color: var(--color-soft-black) !important;
+        display: block;
+    }
+    header nav.menu ul li a{
+        text-align: center;
+        width: 600px;
         display: block;
     }
 }

@@ -14,7 +14,8 @@ class Header extends Component {
           </a>
         </div>
         <button className="menu-toggle">
-          <i className="fa fa-lg fa-bars"></i>
+        &#9776;
+         {/*<i className="fa fa-lg fa-bars"></i>*/}
         </button>
         <nav className="menu">
           <ul>
