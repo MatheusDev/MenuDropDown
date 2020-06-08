@@ -99,6 +99,10 @@ header aside.autenticacao a.destaque:active{
         color: var(--color-white);
         background-color: var(--color-soft-black);
     }
+    header nav{
+        display: none;
+    }
+    /*
     header{
         width: 100%;
     }
@@ -120,5 +124,5 @@ header aside.autenticacao a.destaque:active{
         text-align: center;
         width: 600px;
         display: block;
-    }
+    }*/
 }
